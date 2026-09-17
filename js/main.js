@@ -1,5 +1,5 @@
 // Payal Group — fixed header + dynamic interactions
-const WA_NUMBER = '918855588610';
+const WA_NUMBER = '91805558160';
 const $ = (s, c=document) => c.querySelector(s);
 const $$ = (s, c=document) => [...c.querySelectorAll(s)];
 
