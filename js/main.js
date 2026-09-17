@@ -1,5 +1,5 @@
 // Payal Group — fixed header + dynamic interactions
-const WA_NUMBER = '91805558160';
+const WA_NUMBER = '918055588160';
 const $ = (s, c=document) => c.querySelector(s);
 const $$ = (s, c=document) => [...c.querySelectorAll(s)];
 
@@ -159,9 +159,10 @@ function gNav(d){
 }
 
 /* ---------- Forms → WhatsApp ---------- */
-function sendToWhatsApp(data){
+function sendToWhatsApp(data, num){
+  const to = (num || WA_NUMBER).replace(/\D/g,'');
   const msg = `New Property Enquiry%0AName: ${encodeURIComponent(data.name||'')}%0AMobile: ${encodeURIComponent(data.mobile||'')}%0AEmail: ${encodeURIComponent(data.email||'')}%0ARequirement: ${encodeURIComponent(data.interest||data.requirement||'')}%0APreferred Plot: ${encodeURIComponent(data.plot||data.preferred||'')}%0AMessage: ${encodeURIComponent(data.message||'')}`;
-  window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`,'_blank');
+  window.open(`https://wa.me/${to}?text=${msg}`,'_blank');
 }
 function initForms(){
   $$('form[data-wa]').forEach(f=>{
@@ -171,7 +172,7 @@ function initForms(){
       if(!d.name || !d.mobile){ alert('Please enter your Name and Mobile Number.'); return; }
       if(!/^[6-9]\d{9}$/.test(String(d.mobile).replace(/\D/g,'').slice(-10))){ alert('Please enter a valid 10-digit mobile number.'); return; }
       const btn = f.querySelector('[type=submit]'); if(btn){ btn.textContent='Opening WhatsApp…'; setTimeout(()=>btn.textContent='Send Enquiry on WhatsApp',2500); }
-      sendToWhatsApp(d);
+      sendToWhatsApp(d, f.getAttribute('data-wa-number'));
     });
   });
 }

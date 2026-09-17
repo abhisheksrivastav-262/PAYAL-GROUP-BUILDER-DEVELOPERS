@@ -14,6 +14,6 @@ All 3 images are now added in this folder:
    → Home location, About, Project location card, Layout page,
       Amenities banner, Gallery ("Actual Site Photo"), Contact
 
-Contact: +91 8055588160 • Payalgroupdevelopers@gmail.com
-Forms on Contact / Enquire / Layout open WhatsApp (wa.me/91805558160)
+Contact: +91 80555 88160 • Payalgroupdevelopers@gmail.com
+Forms on Contact / Enquire / Layout open WhatsApp (wa.me/918055588160)
 with the filled Name / Mobile / Email / Requirement / Plot / Message.
